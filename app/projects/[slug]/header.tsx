@@ -54,7 +54,7 @@ export const Header: React.FC<Props> = ({ project }) => {
         <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
           <div className="flex justify-between gap-8">
             {/* Links for Twitter and GitHub */}
-            <Link target="_blank" href="https://twitter.com/naterbug123">
+            <Link target="_blank" href="https://twitter.com/naterbug321">
               <Twitter
                 className={`w-6 h-6 duration-200 hover:font-medium ${
                   isIntersecting

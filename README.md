@@ -1,33 +1,52 @@
 <div align="center">
-    <a href="https://chronark.com"><h1 align="center">chronark.com</h1></a>
-
-My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Upstash](https://upstash.com?ref=chronark.com), [Contentlayer](https://www.contentlayer.dev/) and deployed to [Vercel](https://vercel.com/).
-
+  <a href="https://chronark-portfolio-nosync.vercel.app/"><h1 align="center">Nathan Wright's Portfolio</h1></a>
 </div>
+
+Welcome to my personal portfolio website, showcasing my projects, skills, and a custom-built guessing game! This site is built with the latest [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/) and follows best practices for modern web development.
 
 <br/>
 
+## Features
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/upstash/clone?demo-title=Next.js%20Portfolio%20with%20Pageview%20Counter&demo-description=Portfolio%20site%20with%20pageview%20counter%2C%20built%20with%20Next.js%2013%20App%20Router%2C%20Contentlayer%2C%20and%20Upstash%20Redis.&demo-url=https%3A%2F%2Fchronark.com%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1DA8n5a6WaP9p1FXf9LmUY%2Fc6264fa2732355787bf657df92dda8a1%2FCleanShot_2023-04-17_at_14.17.37.png&project-name=Next.js%20Portfolio%20with%20Pageview%20Counter&repository-name=nextjs-portfolio-pageview-counter&repository-url=https%3A%2F%2Fgithub.com%2Fchronark%2Fchronark.com&from=templates&integration-ids=oac_V3R1GIpkoJorr6fqyiwdhl17)
+- **Custom Guessing Game**: Engage with a fun interactive game designed to showcase my development skills.
+- **Project Showcase**: Discover my personal and collaborative projects with detailed descriptions and live demos.
+- **Contact Information**: Easily get in touch with me through the integrated contact form.
+- **Responsive Design**: Enjoy a seamless experience on any device, thanks to Tailwind CSS's responsive utilities.
 
 ## Running Locally
 
+To run this project locally:
 
 ```sh-session
-git clone https://github.com/chronark/chronark.com.git
-cd chronark.com
+git clone https://github.com/njwright/chronark_portfolio.nosync.git
+cd portfolio
 ```
 
+## Local Development
 
-Create a `.env` file similar to [`.env.example`](https://github.com/chronark/chronark.com/blob/main/.env.example).
+Create a `.env.local` file at the root of your project and add the necessary environment variables based on `.env.example`.
 
-Then install dependencies and run the development server:
-```sh-session
+Install the dependencies and start the development server:
+
+```sh
 pnpm install
 pnpm dev
 ```
 
+### Deployment
 
-## Cloning / Forking
+The site is deployed on Vercel for optimal performance and scalability. Click below to deploy your own version of the portfolio:
 
-Please remove all of my personal information (projects, images, etc.) before deploying your own version of this site.
+Deploy with Vercel
+
+### License
+
+This project is open-source and available under the MIT License. Feel free to fork and adapt it for your own use.
+
+Please note that this project was adapted from a template created by Chronark.
+
+### Acknowledgments
+
+Special thanks to Chronark for the original template which inspired this portfolio's design and structure.
+
+© Nathan Wright | MIT Licensed | Adapted from a Chronark template

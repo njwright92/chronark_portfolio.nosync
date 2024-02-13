@@ -20,7 +20,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg md:text-2xl duration-500 text-zinc-300 hover:text-peachFuzz drop-shadow-sm" // Swapped colors for text and hover
+              className="text-lg md:text-2xl duration-500 text-zinc-300 hover:text-peachFuzz drop-shadow-sm"
             >
               {item.name}
             </Link>

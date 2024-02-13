@@ -28,7 +28,6 @@ export default function ProjectsPage() {
       ];
       let projectsData: Project[] = [];
 
-      // Convert fetching of project data to a series of Promises and use Promise.all to wait for all of them
       const fetchPromises = fileNames.map(async (fileName) => {
         try {
           const response = await fetch(`/content/projects/${fileName}`);

@@ -78,7 +78,7 @@ const SiteRequestModal: React.FC<Props> = ({ isOpen, onClose }) => {
       >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 shadow-md p-2 text-peachFuzz transition duration-150 ease-in-out" // Changed text color
+          className="absolute top-2 right-2 shadow-md p-2 text-peachFuzz transition duration-150 ease-in-out"
           aria-label="Close"
         >
           <svg
@@ -99,7 +99,7 @@ const SiteRequestModal: React.FC<Props> = ({ isOpen, onClose }) => {
 
         <h1
           id="modal-title"
-          className="mt-4 mb-4 text-xl font-bold text-zinc-300" // Changed color
+          className="mt-4 mb-4 text-xl font-bold text-zinc-300"
         >
           Site Request!
         </h1>
@@ -114,7 +114,7 @@ const SiteRequestModal: React.FC<Props> = ({ isOpen, onClose }) => {
             <>
               <label
                 htmlFor={questions[step].id}
-                className="block mb-2 text-lg text-zinc-300" // Changed color
+                className="block mb-2 text-lg text-zinc-300"
               >
                 <strong>{questions[step].text}</strong>
               </label>
@@ -122,13 +122,13 @@ const SiteRequestModal: React.FC<Props> = ({ isOpen, onClose }) => {
                 id={questions[step].id}
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                className="w-full p-2 mb-4 text-peachFuzz bg-zinc-900 border border-zinc-300 rounded-xl focus:border" // Changed text color
+                className="w-full p-2 mb-4 text-peachFuzz bg-zinc-900 border border-zinc-300 rounded-xl focus:border"
                 rows={4}
                 aria-describedby="response-feedback"
               />
               <button
                 onClick={handleNext}
-                className="mt-4 px-6 py-3 bg-zinc-900 text-zinc-300 font-medium text-lg leading-none uppercase rounded-xl shadow-md hover:bg-zinc-800 focus:bg-zinc-800 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 active:bg-zinc-800 transition duration-150 ease-in-out border border-peachFuzz" // Changed text and border color
+                className="mt-4 px-6 py-3 bg-zinc-900 text-zinc-300 font-medium text-lg leading-none uppercase rounded-xl shadow-md hover:bg-zinc-800 focus:bg-zinc-800 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 active:bg-zinc-800 transition duration-150 ease-in-out border border-peachFuzz"
               >
                 Next
               </button>
@@ -145,12 +145,11 @@ const SiteRequestModal: React.FC<Props> = ({ isOpen, onClose }) => {
             {/* Completion message and email link */}
             <h3 className="text-md font-semibold mb-4 text-zinc-300">
               {" "}
-              // Changed color Thanks for answering the questions! Click the
-              button below to email me your site request with the information
-              you provided.
+              Thanks for answering the questions! Click the button below to
+              email me your site request with the information you provided.
             </h3>
             <a
-              className="mt-4 px-6 py-3 bg-zinc-900 text-zinc-300 font-medium text-lg leading-none uppercase rounded-xl shadow-md hover:bg-zinc-800 focus:bg-zinc-800 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 active:bg-zinc-800 transition duration-150 ease-in-out border border-peachFuzz" // Changed text and border color
+              className="mt-4 px-6 py-3 bg-zinc-900 text-zinc-300 font-medium text-lg leading-none uppercase rounded-xl shadow-md hover:bg-zinc-800 focus:bg-zinc-800 focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-zinc-500 active:bg-zinc-800 transition duration-150 ease-in-out border border-peachFuzz"
               href={composeEmailLink()}
             >
               Send Request!

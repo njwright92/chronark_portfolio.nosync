@@ -33,7 +33,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={150}
       />
-      <div className="flex justify-center mt-4 mb-8 animate-title">
+      <div className="flex justify-center mt-1 mb-2 animate-title">
         <button
           id="game-button"
           className="rounded-xl  p-2 text-base mx-auto shadow-lg bg-peachFuzz animate-pulse"
@@ -48,15 +48,15 @@ export default function Home() {
 
       <div className="w-screen h-1 animate-glow animate-fade-right bg-gradient-to-r from-peachFuzz/0 via-peachFuzz/70 to-peachFuzz/0" />
       <div className="my-16 text-center animate-fade-in">
-        <h2 className=" typewriter italic text-md lg:text-xl text-zinc-300 drop-shadow-sm">
+        <h2 className="typewriter italic text-sm sm:text-md lg:text-xl text-zinc-300 drop-shadow-md">
           Your best investment is in yourself!
         </h2>
-        <h3 className="text-md lg:text-xl text-zinc-300 drop-shadow-sm mb-4 mt-4">
+        <h3 className="text-sm sm:text-md lg:text-xl text-zinc-300 drop-shadow-md mb-4 mt-4">
           Nathan Wright - Junior Software Developer, Crafting Code with Passion
           and Precision.
         </h3>
-        <h3 className="text-sm lg:text-md text-peachFuzz drop-shadow-sm">
-          © {currentYear} Adapted from the Chronack Next Template.
+        <h3 className="text-xs sm:text-sm lg:text-md text-peachFuzz drop-shadow-md">
+          © {currentYear} Adapted from the Chronark Next Template.
         </h3>
       </div>
     </div>

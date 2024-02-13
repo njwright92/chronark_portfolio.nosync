@@ -36,7 +36,7 @@ export default function Home() {
       <div className="flex justify-center mt-1 mb-2 animate-title">
         <button
           id="game-button"
-          className="rounded-xl  p-2 text-base mx-auto shadow-lg bg-peachFuzz animate-pulse"
+          className="rounded-xl p-2 text-base mx-auto shadow-lg bg-peachFuzz animate-pulse"
           onClick={gifGame}
         >
           Show GIF

@@ -28,7 +28,7 @@ export default function Home() {
         </ul>
       </nav>
 
-      <div className="hidden w-screen h-1 animate-glow md:block animate-fade-left bg-gradient-to-r from-peachFuzz/0 via-peachFuzz/70 to-peachFuzz/0" />
+      <div className=" w-screen h-1 animate-glow animate-fade-left bg-gradient-to-r from-peachFuzz/0 via-peachFuzz/70 to-peachFuzz/0" />
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={150}
@@ -46,7 +46,7 @@ export default function Home() {
         Dev Portfolio
       </h1>
 
-      <div className="hidden w-screen h-1 animate-glow md:block animate-fade-right bg-gradient-to-r from-peachFuzz/0 via-peachFuzz/70 to-peachFuzz/0" />
+      <div className="w-screen h-1 animate-glow animate-fade-right bg-gradient-to-r from-peachFuzz/0 via-peachFuzz/70 to-peachFuzz/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className=" typewriter italic text-md lg:text-xl text-zinc-300 drop-shadow-sm">
           Your best investment is in yourself!

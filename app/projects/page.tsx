@@ -20,12 +20,7 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     async function fetchProjectsData() {
-      const fileNames = [
-        "proTracker.mdx",
-        "micFinder.mdx",
-        "floras.mdx",
-        "comedify.mdx",
-      ];
+      const fileNames = ["proTracker.mdx", "floras.mdx", "comedify.mdx"];
       let projectsData: Project[] = [];
 
       const fetchPromises = fileNames.map(async (fileName) => {
@@ -58,7 +53,7 @@ export default function ProjectsPage() {
   }, []);
 
   const featured = allProjects.find((project) => project.slug === "floras");
-  const top2 = allProjects.find((project) => project.slug === "micFinder");
+  const top2 = allProjects.find((project) => project.slug === "comedify");
   const top3 = allProjects.find((project) => project.slug === "proTracker");
   const sorted = allProjects.filter(
     (project) =>

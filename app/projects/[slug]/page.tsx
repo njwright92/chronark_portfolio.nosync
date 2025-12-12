@@ -11,6 +11,8 @@ type Project = {
   title: string;
   description: string;
   content: string;
+  url?: string;
+  repository?: string;
 };
 
 export default function PostPage() {
@@ -41,6 +43,8 @@ export default function PostPage() {
           title: data.title || "Title Not Available",
           description: data.description || "Description Not Available",
           content: parsedContent,
+          url: data.url,
+          repository: data.repository,
         });
       } catch (error) {
         console.error("Error fetching project data:", error);
@@ -57,13 +61,7 @@ export default function PostPage() {
 
   return (
     <>
-      <Header
-        project={{
-          title: project.title,
-          description: project.description,
-          url: project.slug,
-        }}
-      />
+      <Header project={project} />
       <article className="px-8 m-4 text-zinc-300 mx-auto">
         <div dangerouslySetInnerHTML={{ __html: project.content }} />
       </article>

@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     async function fetchProjectsData() {
-      const fileNames = ["proTracker.mdx", "floras.mdx", "comedify.mdx"];
+      const fileNames = ["portfolio.mdx", "floras.mdx", "humorhub.mdx"];
       let projectsData: Project[] = [];
 
       const fetchPromises = fileNames.map(async (fileName) => {
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
       });
 
       projectsData = (await Promise.all(fetchPromises)).filter(
-        Boolean
+        Boolean,
       ) as Project[];
       setAllProjects(projectsData);
     }
@@ -53,13 +53,13 @@ export default function ProjectsPage() {
   }, []);
 
   const featured = allProjects.find((project) => project.slug === "floras");
-  const top2 = allProjects.find((project) => project.slug === "comedify");
-  const top3 = allProjects.find((project) => project.slug === "proTracker");
+  const top2 = allProjects.find((project) => project.slug === "humorhub");
+  const top3 = allProjects.find((project) => project.slug === "portfolio");
   const sorted = allProjects.filter(
     (project) =>
       project.slug !== featured?.slug &&
       project.slug !== top2?.slug &&
-      project.slug !== top3?.slug
+      project.slug !== top3?.slug,
   );
 
   return (
@@ -71,21 +71,21 @@ export default function ProjectsPage() {
       />
       <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-peachFuzz sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-peach-fuzz sm:text-4xl">
             Projects
           </h2>
           <p className="mt-4 text-zinc-300">
             Some of the projects are from work and some are on my own time.
           </p>
         </div>
-        <div className="w-full h-px bg-peachFuzz" />
+        <div className="w-full h-px bg-peach-fuzz" />
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
           <Card>
             <Link href={`/projects/${featured?.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8 shadow-md rounded-xl">
                 <h2
                   id="featured-post"
-                  className="mt-4 text-3xl font-bold text-peachFuzz group-hover:text-zinc-100 sm:text-4xl font-display"
+                  className="mt-4 text-3xl font-bold text-peach-fuzz group-hover:text-zinc-100 sm:text-4xl font-display"
                 >
                   {featured?.title ?? "Title Not Available"}
                 </h2>
@@ -93,7 +93,7 @@ export default function ProjectsPage() {
                   {featured?.description ?? "Description Not Available"}
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-300 hover:text-peachFuzz lg:block">
+                  <p className="hidden text-zinc-300 hover:text-peach-fuzz lg:block">
                     Read more <span aria-hidden="true">&rarr;</span>
                   </p>
                 </div>

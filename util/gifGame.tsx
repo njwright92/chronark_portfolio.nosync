@@ -47,7 +47,7 @@ function gifGame(): void {
   let correct: boolean = false;
   do {
     guess = prompt(
-      `Which one is my favorite sport?\n\n${favoriteSport.join(", ")}`
+      `Which one is my favorite sport?\n\n${favoriteSport.join(", ")}`,
     );
     numTries += 1;
     if (guess === null) {

@@ -1,22 +1,80 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  .text-edge-outline {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+@plugin "@tailwindcss/typography";
+
+/* ===== Theme Extensions ===== */
+@theme {
+  --font-sans:
+    var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: var(--font-calsans);
+
+  --color-peach-fuzz: #ffbe98;
+
+  --animate-fade-in: fade-in 3s ease-in-out forwards;
+  --animate-title: title 4s ease-out forwards;
+  --animate-fade-left: fade-left 3s ease-in-out forwards;
+  --animate-fade-right: fade-right 3s ease-in-out forwards;
+  --animate-typewriter: typewriter 5s steps(30, end) 2s forwards;
+  --animate-blink-caret: blink-caret 0.75s step-end infinite;
+}
+
+/* ===== Keyframes ===== */
+@keyframes fade-in {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.modal-content {
-  transition: opacity 5s ease-in-out, transform 5s ease-in-out;
-  transform: scale(0.7); /* Start with the modal scaled down */
-  opacity: 0; /* Start with the modal transparent */
+@keyframes fade-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.modal-content.open {
-  transform: scale(1); /* Scale to normal size */
-  opacity: 1; /* Fade in to fully opaque */
+@keyframes fade-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes title {
+  0% {
+    line-height: 0%;
+    letter-spacing: 0.25em;
+    opacity: 0;
+  }
+  25% {
+    line-height: 0%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    line-height: 100%;
+    opacity: 1;
+  }
 }
 
 @keyframes typewriter {
@@ -28,16 +86,6 @@
   }
 }
 
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.1em solid #ffbe98/10; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typewriter 5s steps(30, end) 2s forwards;
-}
-
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from,
   to {
@@ -46,6 +94,50 @@
   50% {
     border-color: #ffbe98;
   }
-  100% {
-  }
+}
+
+/* ===== Custom Utilities (Tailwind 4 syntax) ===== */
+@utility bg-gradient-radial {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+}
+
+@utility text-edge-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+@utility typewriter {
+  overflow: hidden;
+  border-right: 0.1em solid rgb(255 190 152 / 0.1);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typewriter 5s steps(30, end) 2s forwards;
+}
+
+/* ===== Modal Styles ===== */
+.modal-content {
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.modal-content.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ===== Typography Customizations ===== */
+.prose code::before,
+.prose code::after {
+  content: "";
+}
+
+.prose-quoteless blockquote p:first-of-type::before,
+.prose-quoteless blockquote p:first-of-type::after {
+  content: none;
 }

@@ -26,7 +26,7 @@ export function Mdx({ slug }: MdxProps) {
         renderer.heading = (text, level) => {
           const tagName = `h${level}`;
           if (level === 1) {
-            return `<${tagName} class="bg-peachFuzz text-zinc-900 drop-shadow-md p-2 my-4 rounded-lg">${text}</${tagName}>`;
+            return `<${tagName} class="bg-peach-fuzz text-zinc-900 drop-shadow-md p-2 my-4 rounded-lg">${text}</${tagName}>`;
           }
           return `<${tagName} class="text-zinc-300 drop-shadow-md my-4">${text}</${tagName}>`;
         };
